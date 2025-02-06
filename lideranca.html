@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Wed Resenha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+
+
+/* Reseta a margin e padding e aplica a fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #55074a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.menu-toggle {
+    background: #65078a;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 20px;
+    transition: transform 0.3s, background 0.3s;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(194, 13, 155, 0.7);
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+    background: #9c137f;
+}
+
+.baby-menu {
+    display: none;
+    background: #000000;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    position: fixed;
+    left: 20px;
+    top: 70px;
+    z-index: 20;
+}
+
+.baby-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.baby-menu li {
+    padding: 14px;
+    background: #1b1b2f;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 8px;
+    transition: background 0.3s;
+}
+
+.baby-menu li:hover {
+    background: #790573;
+}
+
+.baby-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 80px auto;
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.equipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.membro {
+    text-align: center;
+    width: 200px;
+}
+
+.membro img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.membro h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.membro p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #1b1b2f;
+    margin-top: 50px;
+    color: #ccc;
+}
+
+
+
+
+
+</style></head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+        <nav class="baby-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="informacoes.html">Informações</a></li>
+                <li><a href="origem.html">Origem</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="administracao-section">
+            <h1>Administração do Grupo Wed Resenha</h1>
+            <p>O sucesso do <strong>Wed Resenha</strong> não seria possível sem a dedicação e liderança dos membros da administração. Conheça as pessoas que estão à frente do nosso grupo, trabalhando constantemente para garantir o crescimento e a inovação da nossa comunidade.</p>
+        </section>
+
+        <section class="equipes-section">
+            <h2>Nossos Administradores</h2>
+            <div class="equipes-container">
+                <div class="membro">
+                    <img src="luis.png" alt="Admin 1">
+                    <h3>Luis Felipe</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="membro">
+                    <img src="batman.png" alt="Admin 2">
+                    <h3>Yasmin</h3>
+                    <p>administrador</p>
+                </div>
+                <div class="membro">
+                    <img src="jef.png" alt="Admin 3">
+                    <h3>jeft</h3>
+                    <p>administrador</p>
+                </div>
+                <div class="membro">
+                    <img src=".tn.png" alt="Admin 4">
+                    <h3>Talison</h3>
+                    <p>administrador</p>
+                </div>
+                <div class="membro">
+                    <img src="Captura de tela 2025-02-06 105551.png" alt="Admin 5">
+                    <h3> hyago </h3>
+                    <p>desenvolvedor web </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Wed Resenha. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.baby-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
